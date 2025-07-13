@@ -1,4 +1,4 @@
-body{
+/*body{
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   margin-top: 50px;
@@ -17,4 +17,82 @@ input, button{
 .divtype{
   padding: 2px;
   margin: 1px;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #83a4d4, #b6fbff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.App {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+select,
+button,
+input[type="checkbox"] {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.weather-card {
+  margin-top: 20px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #f2f9ff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card img {
+  height: 48px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.weather-card h2 {
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.weather-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}  
+
+
+/*body{
+  background-color: brown;
+} */

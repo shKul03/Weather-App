@@ -7,11 +7,14 @@ function App() {
   const [city, setCity] = useState(null);
   const [aqi, setAqi] = useState(false);
   const [dataExists, setDataExists] = useState(false);
+  const [apiStatus, setStatus] = useState(400);
 
   async function getWeatherClickHandler(city, aqi) {
     const data = await(getWeather(city, aqi));
     setWeather(data);
     setDataExists(true);
+    setStatus(data['Response Code']);
+    alert(apiStatus);
   }
 
   return (
@@ -24,15 +27,16 @@ function App() {
           <label>City</label>
         </div>
         <div className="divtype">
-          <select
+          <label>
+          <input
             id="cities"
             name="cities"
+            type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
           >
-            <option value="paris">Paris</option>
-            <option value="pune">Pune</option>
-          </select>
+          </input>
+          </label>
         </div>
         <div className="divtype">
           <label>
@@ -50,7 +54,7 @@ function App() {
           </button>
         </div>
       </div>
-      {dataExists && (
+      {apiStatus != 400 && dataExists && (
         <div>
           <p>City: {weatherData.location.name}</p>
           <p>Country: {weatherData.location.country}</p>
